@@ -224,34 +224,34 @@ While 1
 	  EndIf
 ;;/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ToolTip("Rietbuyer is Running| Searches done: " &$totalsearches &"|" & " " & "Players bought: "&$increment, 250,250, "")
-$search1 = _imagesearch('noresult.bmp', 0, $x1, $y1, 0)
-$search3 = _ImageSearch('back.bmp', 0, $x3, $y3, 0)
-$search4 = _ImageSearch('buy.bmp', 0, $x4, $y4, 0) ;buy
-$search5 = _ImageSearch('noresult.bmp', 0, $x5, $y5, 0)
-$search7 = _ImageSearch('expired.bmp', 0, $x7, $y7, 0)
-$search8  = _ImageSearch('send.bmp', 0, $x8, $y8, 0)
-$searchstuck = _ImageSearch('stuck.bmp', 0, $x, $y, 0)
-$search = _ImageSearch('search.bmp', 0, $x, $y, 0)
-$searchlist = _ImageSearch('quicklist.bmp', 0, $xoxo, $yoyo, 0)
+$search1 = _imagesearch('bitmaps/noresult.bmp', 0, $x1, $y1, 0)
+$search3 = _ImageSearch('bitmaps/back.bmp', 0, $x3, $y3, 0)
+$search4 = _ImageSearch('bitmaps/buy.bmp', 0, $x4, $y4, 0) ;buy
+$search5 = _ImageSearch('bitmaps/noresult.bmp', 0, $x5, $y5, 0)
+$search7 = _ImageSearch('bitmaps/expired.bmp', 0, $x7, $y7, 0)
+$search8  = _ImageSearch('bitmaps/send.bmp', 0, $x8, $y8, 0)
+$searchstuck = _ImageSearch('bitmaps/stuck.bmp', 0, $x, $y, 0)
+$search = _ImageSearch('bitmaps/search.bmp', 0, $x, $y, 0)
+$searchlist = _ImageSearch('bitmaps/quicklist.bmp', 0, $xoxo, $yoyo, 0)
 if $search = 1 Then
-	$search = _ImageSearch('search.bmp', 0, $x, $y, 0)
-		$rightsearch = "search.bmp"
+	$search = _ImageSearch('bitmaps/search.bmp', 0, $x, $y, 0)
+		$rightsearch = "bitmaps/search.bmp"
 EndIf
 if $search = 0 Then
-	$search = _ImageSearch('search1.bmp', 0, $x, $y, 0)
-		$rightsearch = "search1.bmp"
+	$search = _ImageSearch('bitmaps/search1.bmp', 0, $x, $y, 0)
+		$rightsearch = "bitmaps/search1.bmp"
 EndIf
 if $search = 0 Then
-	$search = _ImageSearch('search2.bmp', 0, $x, $y, 0)
-	$rightsearch = "search2.bmp"
+	$search = _ImageSearch('bitmaps/search2.bmp', 0, $x, $y, 0)
+	$rightsearch = "bitmaps/search2.bmp"
 EndIf
 if $search = 0 Then
-	$search = _ImageSearch('search3.bmp', 0, $x, $y, 0)
-		$rightsearch = "search3.bmp"
+	$search = _ImageSearch('bitmaps/search3.bmp', 0, $x, $y, 0)
+		$rightsearch = "bitmaps/search3.bmp"
 EndIf
 if $search = 0 Then
-	$search = _ImageSearch('search4.bmp', 0, $x, $y, 0)
-		$rightsearch = "search4.bmp"
+	$search = _ImageSearch('bitmaps/search4.bmp', 0, $x, $y, 0)
+		$rightsearch = "bitmaps/search4.bmp"
 EndIf
 ;;/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -335,7 +335,7 @@ $increment += 1
 MouseClick("left",$x4 -151  + $randompixel, $y4+76 + $randompixel, 1, $mousespeed) ;click twice
 Sleep(Random(150,250) + $interval)
 Sleep(random(1740,1780))
-$search8  = _ImageSearch('send.bmp', 0, $x8, $y8, 0)
+$search8  = _ImageSearch('bitmaps/send.bmp', 0, $x8, $y8, 0)
 Sleep($interval)
 If GUICtrlRead($Checkbox2) = 4 Then
 MouseClick("left",$x8 + $randompixel, $y8 + $randompixel, 1, $mousespeed) ;send button
@@ -378,7 +378,7 @@ Func QuickList()
    Global $minbuy =  GUICtrlRead($Input1)
    Global $maxbuy = GUICtrlRead($Input2)
 Sleep(500)
-_ImageSearch('quicklist.bmp', 0, $xoxo, $yoyo, 0)
+_ImageSearch('bitmaps/quicklist.bmp', 0, $xoxo, $yoyo, 0)
 MouseClick("primary", $xoxo, $yoyo, 1, 5)
 Sleep(2500)
 _ImageSearch('cardxy.bmp', 0, $xoxo, $yoyo, 0)
